@@ -1,0 +1,46 @@
+#card img{
+    width: 23em;
+    height: 15em;
+    border-radius: 0.5em;
+}
+#momo img{
+    width: 23em;
+    height: 15em;
+    border-radius: 0.5em;
+    margin-left: 3em;
+}
+#paymentPage{
+    display: block;
+    width: 80%;
+    border-radius: 0.5em;
+    margin: 2em;
+    background-color: white;
+}
+#paymentMethods{
+    margin:3em;
+    height: auto;
+    display: flex;
+    margin-top: 1em;
+}
+.icon1{
+    margin-left: 0.8em;
+    margin-top: 1em;
+    position: absolute;
+    z-index: 1;
+}
+#mobileMoney{
+    display: block;
+}
+#credit{
+    display: none;
+}
+.input-group{
+    margin-top: 0.5em;
+}
+form{
+    width: 60%;
+}
+.submitbtn{
+    color: black;
+    margin-top: 0.5em;
+}
