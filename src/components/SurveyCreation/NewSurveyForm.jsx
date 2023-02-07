@@ -4,7 +4,7 @@ import SurveyInput from './SurveyInput';
 export default function NewSurveyForm() {
   const [surveyDetails, setSurveyDetails] = useState({title: "", description:""});
   const [questions, setQuestions] = useState([
-    {id: 0, title: "", description:"", type:"", question: ""}
+    {id: 0, title: "", description:"", type:"", question: []}
   ]);
   const questionTypes = [
     "Multiple Choice", "Short Text", "Long Text", "Select"
@@ -16,7 +16,7 @@ export default function NewSurveyForm() {
   }
   const addQuestion = (e) =>{
     e.preventDefault();
-    setQuestions([...questions, {id: questions.length+1, title: "", description:"", type:"", question: ""}])
+    setQuestions([...questions, {id: questions.length, title: "", description:"", type:"", question: [0]}])
     console.log("Questions is", questions)
   }
 
@@ -33,6 +33,25 @@ export default function NewSurveyForm() {
       setQuestions(updatedQuestions)
       console.log("updated questioins:", updatedQuestions)
     }
+  }
+
+  const addOption = (value, questionId, optionId) =>{
+      console.log("This is what you typed:", value)
+      console.log("The option is at index: ", optionId)
+      
+      let updatedQuestionArray = []
+      questions.map(question =>{
+        let element = value;
+         question.question[optionId] = element;
+         updatedQuestionArray = [...question.question]
+      }
+        
+      )
+      let updatedOptions = questions.map(question =>
+        question.id ==  questionId ? {...question, question: updatedQuestionArray} : question
+        )
+        setQuestions(updatedOptions)
+        console.log("updated Options:", updatedOptions)
   }
 
   useEffect(() =>{
@@ -80,7 +99,10 @@ export default function NewSurveyForm() {
                 {
                     question.type == "Multiple Choice" ? 
                     <div>
-                      <SurveyInput type="radio"/>
+                      <SurveyInput type="radio" 
+                     onChange={(value, id) => {addOption(value, index, id)}}
+                      
+                    />
                     </div> : <div>okay</div>
                     }
                   </div>

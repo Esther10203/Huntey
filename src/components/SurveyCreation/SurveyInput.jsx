@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function SurveyInput({type, questionTypes, onChange}) {
-  
+  const [options, setOptions] = useState([""])
+  const handleAddOption = () =>{
+    setOptions([...options, ""])
+  }
   return (
     <div className='w-[80%]'>
     {(() => {
@@ -14,10 +17,16 @@ export default function SurveyInput({type, questionTypes, onChange}) {
                                       )}</select>);
             case "radio": return(
               <div>
-                <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault2"/>
-                <input type="text" />
+               {
+                options.map((option, index) =>
+                <div>
+                  <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault2"/>
+                  <input type="text" onChange={(e) => {onChange(e.target.value, index)}}/> 
+                </div>
+                )
+               }
 
-                <button onClick={addOption}>
+                <button onClick={handleAddOption}>
                   Add Option
                 </button>
               </div>
