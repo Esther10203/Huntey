@@ -1,6 +1,6 @@
 import React from 'react'
-import card from "../assets/card.webp"
-import momo from "../assets/momo.webp"
+import card from "../assets/credit.png"
+import momo from "../assets/mtn.png"
 import "../styles/payment.css"
 
 export default function Payment() {
