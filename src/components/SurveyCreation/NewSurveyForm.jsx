@@ -62,7 +62,7 @@ export default function NewSurveyForm() {
     <div className='bg-white p-8 w-4/5'>
         <h1 className='text-center text-[#49E6D9] font-bold'>Create New Survey</h1>
       <form onSubmit={handleSubmit} className="w-full">
-      <div className='my-5'>
+      <div className='my-3'>
         <label className='font-medium'>
           Title:
         </label>
@@ -71,7 +71,7 @@ export default function NewSurveyForm() {
         onChange={ (value) => {handleOnChange(value, "surveyDetails", "title")}}
         />
       </div>
-      <div className='my-5 w-full'>
+      <div className='my-3 w-full'>
         <label className='font-medium text-[1em]'>
           Description:
         </label>
@@ -80,7 +80,7 @@ export default function NewSurveyForm() {
         />
       </div>
 
-      <h1 className="font-bold">Questions</h1>
+      {/* <h1 className="font-bold">Questions</h1> */}
       <div>
         {
             questions.map((question, index) =>
