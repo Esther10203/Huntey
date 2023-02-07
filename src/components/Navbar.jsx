@@ -1,21 +1,15 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
-import Dashboard from "./Dashboard";
-import Doors from "./Doors";
-import Lights from "./Lights";
+import menu from "../assets/menu.png";
 
-function Navbar() {
-  return (
-      <React.Fragment>
-         <section>
-            <Routes>
-               <Route path="/dashboard" element={<Dashboard />}/>
-               <Route path="/lights" element={<Lights />}/>
-               <Route path="/doors" element={<Doors />}/>
-            </Routes>
-         </section>
-      </React.Fragment>
-  );
-}
-
-export default Navbar;
+export default function Navbar() {
+   return (
+     <div className={`px-7 py-6 text-2xl font-semibold my-1 flex gap-x-4 items-center`}>
+       <img
+         src={menu}
+         className={`cursor-pointer`}
+       //   onClick={() => setOpen(!open)}
+       />
+       <h1 className="text-md font-bold">Dashboard</h1>
+     </div>
+   );
+ }

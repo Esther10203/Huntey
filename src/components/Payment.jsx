@@ -2,10 +2,16 @@ import React from 'react'
 import card from "../assets/card.webp"
 import momo from "../assets/momo.webp"
 import "../styles/payment.css"
+import Navbar from './Navbar'
+import Sidebar from './Sidebar'
 
 export default function Payment() {
 
   return (
+ <React.Fragment>
+      <Sidebar />
+      <div className="w-4/5">
+        <Navbar />
     <div id='paymentPage'>
       <div id='paymentMethods'>
         <div id='card' onClick={function(){
@@ -77,5 +83,9 @@ export default function Payment() {
     </form>    
    </div>
     </div>
+      </div>
+    </React.Fragment>
   )
+    
+  );
 }
