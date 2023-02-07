@@ -3,12 +3,12 @@ import { useState } from "react";
 import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Login from "./Auth/Login";
-import NewSurvey from "./NewSurvey";
 import ViewAllSurveys from "./ViewAllSurveys";
 import Surveyors from "./Surveyors";
 import Payment from "./Payment";
 import Profile from "./Profile";
 import Settings from "./Settings";
+import NewSurvey from "../pages/NewSurvey";
 
 function Sidebar() {
   const [open, setOpen] = useState(true);

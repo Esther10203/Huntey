@@ -86,6 +86,4 @@ export default function Payment() {
       </div>
     </React.Fragment>
   )
-    
-  );
 }
