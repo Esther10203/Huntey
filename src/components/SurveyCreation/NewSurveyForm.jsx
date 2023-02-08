@@ -13,6 +13,7 @@ export default function NewSurveyForm() {
   const [selectedQuestionType, setSelectedQuestionType] = useState();
   const handleSubmit = (e) =>{
     e.preventDefault();
+
   }
   const addQuestion = (e) =>{
     e.preventDefault();
@@ -42,8 +43,10 @@ export default function NewSurveyForm() {
       let updatedQuestionArray = []
       questions.map(question =>{
         let element = value;
-         question.question[optionId] = element;
-         updatedQuestionArray = [...question.question]
+        if(question.id ==  questionId){
+          question.question[optionId] = element;
+          updatedQuestionArray = [...question.question]
+        }
       }
         
       )
@@ -59,37 +62,40 @@ export default function NewSurveyForm() {
   }, [selectedQuestionType])
 
    return (
-    <div className='bg-white p-8 w-4/5'>
-        <h1 className='text-center text-[#49E6D9] font-bold'>Create New Survey</h1>
+    <div className='bg-white p-8 col-span-4 my-4 rounded-md'>
+        <h1 className='text-center text-[#28BDB4] font-semibold'>Create New Survey</h1>
       <form onSubmit={handleSubmit} className="w-full">
-      <div className='my-5'>
+      <div className='my-3'>
         <label className='font-medium'>
           Title:
         </label>
         <SurveyInput
         type="input"
         onChange={ (value) => {handleOnChange(value, "surveyDetails", "title")}}
+        placeholder="Survey Title"
         />
       </div>
-      <div className='my-5 w-full'>
+      <div className='my-3 w-full'>
         <label className='font-medium text-[1em]'>
           Description:
         </label>
         <SurveyInput type="input"
         onChange={ (value) => {handleOnChange(value, "surveyDetails", "description")}}
+        placeholder="Survey Description"
         />
       </div>
 
-      <h1 className="font-bold">Questions</h1>
+      {/* <h1 className="font-bold">Questions</h1> */}
       <div>
         {
             questions.map((question, index) =>
                 (
                 <div>
+                  <fieldset className='font-bold underline'>Question {index+1}</fieldset>
                     <p>Question Title</p>
-                  <SurveyInput type="input"/>
+                  <SurveyInput type="input" placeholder="Type the Question Title"/>
                 <p>Question Description</p>
-                  <SurveyInput type="input" />
+                  <SurveyInput type="input" placeholder="Type the Question Description"/>
                 <p>Question Type</p>
                   <SurveyInput 
                   type="select" 
@@ -97,13 +103,13 @@ export default function NewSurveyForm() {
                   onChange={ (value) => {handleOnChange(value,"questionDetails", "select", index)}}
                   />
                 {
-                    question.type == "Multiple Choice" ? 
+                    question.type == "Multiple Choice" &&
                     <div>
                       <SurveyInput type="radio" 
                      onChange={(value, id) => {addOption(value, index, id)}}
                       
                     />
-                    </div> : <div>okay</div>
+                    </div>
                     }
                   </div>
 
@@ -112,10 +118,12 @@ export default function NewSurveyForm() {
             )
         }
       </div>
-      <div className='w-[80%] relative my-3'>
-          <button className=' absolute right-0 mx-4 bg-[#C2E5E3] px-5 py-1 rounded-md border border-solid ' onClick={addQuestion}> Add Question</button>
+      <div className='w-[90%] relative my-3 h-12'>
+          <button className=' absolute right-0 mx-4 bg-[#C2E5E3] px-5 py-1 rounded-md border border-solid focus:outline-none' onClick={addQuestion}> Add Question</button>
       </div>
-      <input type="submit" value="Submit" />
+      <div className='flex justify-center'>
+      <input type="submit" value="Submit" className='bg-[#28BDB4] w-[70%] rounded-md py-1 text-white' />
+      </div>
         </form>
     </div>
   )
