@@ -1,23 +1,17 @@
-#card img{
-    width: 23em;
-    height: 15em;
-    border-radius: 0.5em;
+#card .img{
+    width: 21em;
 }
-#momo img{
-    width: 23em;
-    height: 15em;
-    border-radius: 0.5em;
-    margin-left: 3em;
+#momo .img{
+    width: 21em;
 }
 #paymentPage{
     display: block;
-    width: 80%;
+    width: 100%;  
     border-radius: 0.5em;
-    margin: 2em;
-    background-color: white;
+    padding: 2em;
 }
 #paymentMethods{
-    margin:3em;
+    margin:3em 0;
     height: auto;
     display: flex;
     margin-top: 1em;
@@ -39,8 +33,4 @@
 }
 form{
     width: 60%;
-}
-.submitbtn{
-    color: black;
-    margin-top: 0.5em;
 }
