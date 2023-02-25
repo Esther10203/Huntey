@@ -3,6 +3,7 @@ import "./App.css";
 import Sidebar from "./components/Sidebar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./components/Auth/Login";
+import Register from "./components/Auth/Register";
 import Dashboard from "./components/Dashboard";
 import ViewAllSurveys from "./components/ViewAllSurveys";
 import NewSurvey from "./components/NewSurvey";
@@ -26,7 +27,8 @@ function App() {
               <Route path="/payment" element={<Payment />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/setting" element={<Settings />} />
-              <Route path="surveys" element={<ViewAllSurveys />} />
+              <Route path="/surveys" element={<ViewAllSurveys />} />
+              <Route path="/register" element={<Register />} />
             </Route>
           </Routes>
         </BrowserRouter>

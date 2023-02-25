@@ -3,15 +3,16 @@ import { Link } from "react-router-dom";
 import "../../styles/auth.css"
 import background from "../../assets/background.png"
 
-function LoginContainer() {
+
+function RegContainer() {
     return (
         <React.Fragment>
-            <div className='loginContainer w-100'>
-                <div className='loginFormBox'>
-                    <div className='loginFormCont ml-5'>
-                        <h1 className='font-bold mb-3'>Sign in</h1>
-                        <p className='mb-4'>
-                            Please enter your email and password for  signing in. As soon as you are done, we will redirect you to your dashboard.
+            <div className='container w-100'>
+                <div className='formBox'>
+                    <div className='formCont ml-5'>
+                        <h1 className='font-bold mb-3'>Sign Up</h1>
+                        <p className='mb-4 '>
+                        Enter your credentials to create your free account.
                         </p>
 
                         <form action="POST" className='form'>
@@ -19,6 +20,18 @@ function LoginContainer() {
                             <input
                                 type="email"
                                 id="email"
+                                className="mb-4 form-input px-4 py-3 border rounded w-full shadow text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            />
+                            <label htmlFor="fullName" className='block text-gray-700 font-bold text-sm mb-2'>Full Name</label>
+                            <input
+                                type="text"
+                                id="fullName"
+                                className="mb-4 form-input px-4 py-3 border rounded w-full shadow text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            />
+                            <label htmlFor="companyName" className='block text-gray-700 font-bold text-sm mb-2'>Company Name</label>
+                            <input
+                                type="text"
+                                id="companyName"
                                 className="mb-4 form-input px-4 py-3 border rounded w-full shadow text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             />
                             <label htmlFor="password" className='block text-gray-700 text-sm font-bold mb-2'>Password</label>
@@ -50,13 +63,13 @@ function LoginContainer() {
     )
 }
 
-export default function Login() {
+export default function Register() {
     return (
         <div
-            style={{ backgroundImage: `url(${background})`, backgroundSize: `cover`, backgroundRepeat: `no-repeat`}}
+            style={{ backgroundImage: `url(${background})`, backgroundSize: `cover`, backgroundRepeat: `no-repeat` }}
         >
             {/* <img src={login_logo} alt="Login Logo" width="600" height="600" /> */}
-            <LoginContainer />
+            <RegContainer />
         </div>
     )
 }
