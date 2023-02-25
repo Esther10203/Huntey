@@ -3,12 +3,12 @@ import { useState } from "react";
 import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Login from "./Auth/Login";
-import NewSurvey from "./NewSurvey";
 import ViewAllSurveys from "./ViewAllSurveys";
 import Surveyors from "./Surveyors";
 import Payment from "./Payment";
 import Profile from "./Profile";
 import Settings from "./Settings";
+import NewSurvey from "../pages/NewSurvey";
 
 function Sidebar() {
   const [open, setOpen] = useState(true);
@@ -28,7 +28,7 @@ function Sidebar() {
   return (
         <div
           className={`${
-            open ? "w-1/5" : " w-28"
+            open ? "w-1/4" : " w-28"
           } duration-300 h-screen px-9 py-7 bg-bg_dark text-white_color`}
         >
           <div className={`flex gap-x-4 items-center`}>
@@ -48,7 +48,7 @@ function Sidebar() {
                 <NavLink
                   to={`../${menu.url}`}
                   key={index}
-                  className={`hover:bg-link_bg text-md rounded-md flex items-center gap-x-4 cursor-pointer p-2 mt-3 ${
+                  className={`hover:bg-link_bg text-lg text-gray-400 rounded-md flex items-center gap-x-4 cursor-pointer p-2 mt-2 ${
                     menu.gap && !open ? "mt-12" : ""
                   } ${index === 0 && "bg-link_bg"} ${
                     menu.space ? "ml-10" : ""

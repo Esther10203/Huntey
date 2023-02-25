@@ -6,11 +6,11 @@ import Login from "./components/Auth/Login";
 import Register from "./components/Auth/Register";
 import Dashboard from "./components/Dashboard";
 import ViewAllSurveys from "./components/ViewAllSurveys";
-import NewSurvey from "./components/NewSurvey";
 import Payment from "./components/Payment";
 import Profile from "./components/Profile";
 import Settings from "./components/Settings";
 import Surveyors from "./components/Surveyors";
+import NewSurvey from "./pages/NewSurvey";
 
 function App() {
   return (
