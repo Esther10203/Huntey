@@ -11,6 +11,9 @@ import Profile from "./components/Profile";
 import Settings from "./components/Settings";
 import Surveyors from "./components/Surveyors";
 import NewSurvey from "./pages/NewSurvey";
+import Verification from "./components/Auth/Verification";
+import ForgotPassword from "./components/Auth/ForgotPassword";
+import ResetPassword from "./components/Auth/ResetPassword";
 
 function App() {
   return (
@@ -28,7 +31,11 @@ function App() {
               <Route path="/profile" element={<Profile />} />
               <Route path="/setting" element={<Settings />} />
               <Route path="/surveys" element={<ViewAllSurveys />} />
+              <Route path="/forgotpassword" element={<ForgotPassword />} />
+              <Route path="/resetpassword" element={<ResetPassword />} />
               <Route path="/register" element={<Register />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/verify" element={<Verification />} />
             </Route>
           </Routes>
         </BrowserRouter>

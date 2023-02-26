@@ -36,7 +36,7 @@ function LoginContainer() {
                             <label htmlFor="keepSigned" className='text-sm'>Keep me signed in</label>
 
                             {/* <link rel="stylesheet" href="#">Forgot Password</link> */}
-                            <Link to="" className='text-teal-500 text-sm underline hover:text-teal-700 hover:no-underline float-right'>Forgot Password</Link>
+                            <Link to="/forgotpassword" className='text-teal-500 text-sm underline hover:text-teal-700 hover:no-underline float-right'>Forgot Password?</Link>
                             <input
                                 type="button" value="Login"
                                 className='mt-2 mb-3 w-100 block bg-teal-500 hover:bg-teal-700 tracking-wide border-teal-500 hover:border-teal-700 text-lg border-4 text-white py-2 rounded cursor-pointer'

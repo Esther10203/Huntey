@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
 
 body{
-    background-color: #E0F9E3;
+    background-color: #D1F3E4;
     width: 100%;
 }
 
@@ -52,8 +52,96 @@ body{
     width: 90%;
 }
 
-img{
+
+.RegContainer{
+    width: 100%;
     margin: 0;
+    /* height: auto; */
+    margin-left: 27.5em;
+    /* padding: 0em; */
+    z-index: 2;
+}
+
+.RegFormBox{
+    background: white;
+    width: 70%;
+    /* height: 100%; */
+    display: block;
+    /* display: flex; */
+    float: right;
+    /* position: absolute; */
+    /* margin: auto; */
+    /* margin-top: 2em; */
+    padding: 3em 2em 3.5em 4em;
+    margin: 0;
+    /* margin-left: 1em; */
+}
+
+.RegFormCont{
+    font-family: 'Mulish', sans-serif;
+    margin: auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+.RegFormCont h1{
+    color: #27B3AA;
+    /* font-weight: bolder; */
+    font-size: 28px;
+    /* margin-bottom: 15px; */
+}
+
+.RegFormCont p{
+    color: #3A3737;
+    font-size: 15px;
+    width: 90%;
+}
+
+
+.verifyContainer, .forgotContainer, .resetContainer{
+    background-color: white;
+    /* display: block; */
+    /* position: absolute;*/
+    padding: 4em;
+    /* vertical-align: middle; */
+    height: 50%;
+    width: 50%;
+    border-radius: 1%;
+}
+
+.verifyContainer{
+    margin: 12em auto 0em 9em;
+}
+.resetContainer{
+    margin: 8em auto 0em 9em;
+}
+.forgotContainer{
+    margin: 12em auto 0em 9em;
+}
+
+.verifyContainer h1, .forgotContainer h1, .resetContainer h1{
+    color: #27B3AA;
+    font-size: 28px;
+}
+
+.forgotContainer form, .resetContainer form{
+    width: 75%;
+    margin: auto;
+}
+
+.logo{
+    /* margin: 0; */
+    margin: 3em;
+    width: 10%;
+    height: 10%;
+}
+
+.footer{
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
 }
 
 .mt-3{
