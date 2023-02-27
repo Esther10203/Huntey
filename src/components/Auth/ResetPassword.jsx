@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import "../../styles/auth.css"
 import logo from "../../assets/huntey_logo.png"
+import Footer from './Footer';
 
 
 function ResetPassContainer() {
@@ -32,7 +33,7 @@ function ResetPassContainer() {
                     <p className='font-light text-sm'>You will be redirected to log in with your new password</p>
                 </form>
             </div>
-            <p className='footer mb-2'>Made with ♥ by Huntey group  |  huntey©2023</p>
+            
         </React.Fragment>
     )
 }
@@ -40,9 +41,8 @@ function ResetPassContainer() {
 export default function ResetPassword() {
     return (
         <React.Fragment>
-
             <ResetPassContainer />
-
+            <Footer />
         </React.Fragment>
     )
 }

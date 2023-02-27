@@ -10,7 +10,7 @@ function LoginContainer() {
                 <div className='loginFormBox'>
                     <div className='loginFormCont ml-5'>
                         <h1 className='font-bold mb-3'>Sign in</h1>
-                        <p className='mb-4'>
+                        <p className='mb-4 w-75'>
                             Please enter your email and password for  signing in. As soon as you are done, we will redirect you to your dashboard.
                         </p>
 
@@ -34,13 +34,15 @@ function LoginContainer() {
                                 className='mr-2 leading-tight'
                             />
                             <label htmlFor="keepSigned" className='text-sm'>Keep me signed in</label>
-
-                            {/* <link rel="stylesheet" href="#">Forgot Password</link> */}
+                            
                             <Link to="/forgotpassword" className='text-teal-500 text-sm underline hover:text-teal-700 hover:no-underline float-right'>Forgot Password?</Link>
+                            
+                            <Link to="/dashboard" className='hover:no-underline'>
                             <input
                                 type="button" value="Login"
                                 className='mt-2 mb-3 w-100 block bg-teal-500 hover:bg-teal-700 tracking-wide border-teal-500 hover:border-teal-700 text-lg border-4 text-white py-2 rounded cursor-pointer'
                             />
+                            </Link>
                         </form>
                         <Link to="/register" className='text-teal-500 text-sm underline hover:text-teal-700 hover:no-underline'>Don't have an account? Sign up here!</Link>
                     </div>
@@ -55,7 +57,6 @@ export default function Login() {
         <div
             style={{ backgroundImage: `url(${background})`, backgroundSize: `cover`, backgroundRepeat: `no-repeat`}}
         >
-            {/* <img src={login_logo} alt="Login Logo" width="600" height="600" /> */}
             <LoginContainer />
         </div>
     )

@@ -32,7 +32,7 @@ function App() {
               <Route path="/setting" element={<Settings />} />
               <Route path="/surveys" element={<ViewAllSurveys />} />
               <Route path="/forgotpassword" element={<ForgotPassword />} />
-              <Route path="/resetpassword" element={<ResetPassword />} />
+              <Route path="/reset" element={<ResetPassword />} />
               <Route path="/register" element={<Register />} />
               <Route path="/login" element={<Login />} />
               <Route path="/verify" element={<Verification />} />

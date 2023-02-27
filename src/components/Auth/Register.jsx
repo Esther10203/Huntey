@@ -48,8 +48,6 @@ function RegContainer() {
                             />
                             <label htmlFor="keepSigned" className='text-sm'>Keep me signed in</label>
 
-                            {/* <link rel="stylesheet" href="#">Forgot Password</link> */}
-                            {/* <Link to="" className='text-teal-500 text-sm underline hover:text-teal-700 hover:no-underline float-right'>Forgot Password</Link> */}
                             <Link to="/verify" className='hover:no-underline'>
                             <input
                                 type="button" value="Register"
@@ -70,7 +68,6 @@ export default function Register() {
         <div
             style={{ backgroundImage: `url(${background})`, backgroundSize: `cover`, backgroundRepeat: `no-repeat` }}
         >
-            {/* <img src={login_logo} alt="Login Logo" width="600" height="600" /> */}
             <RegContainer />
         </div>
     )
