@@ -19,15 +19,8 @@ export default function Dashboard() {
           <div className={`px-10 pt-6 content_bg w-full h-96`}>
             <div className="flex flex-row w-full">
               <h1 className="font-bold text-2xl">Overall Statistics</h1>
-              <button class="bg-button_color hover:bg-icon_color text-white font-bold py-2 px-4 rounded inline-flex items-center absolute right-10">
-                <svg
-                  class="fill-current w-4 h-4 mr-2"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
-                </svg>
-                <span>Download</span>
+              <button class="bg-button_color hover:bg-icon_color text-white font-normal py-2 px-4 rounded inline-flex items-center absolute right-10">
+                <span>Create New Survey</span>
               </button>
             </div>
 
@@ -47,14 +40,17 @@ export default function Dashboard() {
 
             <div className="flex flex-row w-full ">
               <div class="w-1/2 mr-4 bg-white p-4">
+                <h1 className="text-base font-bold">Recent Responses</h1>
                 {/* <BarChart /> */}
               </div>
-              <div class="w-1/2 bg-white p-4">05</div>
+              <div class="w-1/2 bg-white p-4">
+                <h1 className="text-base font-bold">Respondents Location</h1>
+              </div>
               {/* Dashboard */}
             </div>
           </div>
         </div>
       </div>
-    </React.Fragment> 
+    </React.Fragment>
   );
 }
