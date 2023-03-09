@@ -1,17 +1,60 @@
 import React from "react";
+// import BarChart from "./BarChart";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 
 export default function Dashboard() {
+  const numbers = [
+    { value: 1.234, title: "Total Surveys", img: "answered" },
+    { value: 1.234, title: "Total Responses", img: "enter" },
+    { value: 1.234, title: "Pending Surveys", img: "outingg" },
+    { value: 1.234, title: "Money Spent", img: "money" },
+  ];
   return (
     <React.Fragment>
       <Sidebar />
-      <div className="w-4/5"> 
-      <Navbar />
+      <div className="w-4/5">
+        <Navbar />
         <div className={`bg-content_bg w-full`}>
-          <div className={`px-7 content_bg w-full h-96`}>Dashboard</div>
+          <div className={`px-10 pt-6 content_bg w-full h-96`}>
+            <div className="flex flex-row w-full">
+              <h1 className="font-bold text-2xl">Overall Statistics</h1>
+              <button class="bg-button_color hover:bg-icon_color text-white font-bold py-2 px-4 rounded inline-flex items-center absolute right-10">
+                <svg
+                  class="fill-current w-4 h-4 mr-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+                </svg>
+                <span>Download</span>
+              </button>
+            </div>
+
+            <div className="grid grid-cols-4 gap-6 py-4">
+              {numbers.map((val, key) => (
+                <div className="w-58 bg-white px-4 py-8 rounded-md flex flex-row">
+                  <div className="w-3/5">
+                    <h1 className="font-bold text-3xl">{val["value"]}</h1>
+                    <p className="text-base text-gray-400 mt-2">
+                      {val["title"]}
+                    </p>
+                  </div>
+                  <img src={`./src/assets/${val["img"]}.png`} />
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-row w-full ">
+              <div class="w-1/2 mr-4 bg-white p-4">
+                {/* <BarChart /> */}
+              </div>
+              <div class="w-1/2 bg-white p-4">05</div>
+              {/* Dashboard */}
+            </div>
+          </div>
         </div>
       </div>
-    </React.Fragment>
+    </React.Fragment> 
   );
 }

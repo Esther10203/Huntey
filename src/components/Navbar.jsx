@@ -11,7 +11,7 @@ export default function Navbar() {
 
   const handleSubmit = (e) => e.preventDefault();
   return (
-    <div className={`px-7 py-4 font-semibold flex gap-x-4 items-center`}>
+    <div className={`px-7 py-4 font-semibold flex gap-x-4 items-center bg-white`}>
       <div className="flex">
         <img src={menu} className={`cursor-pointer mr-4 `} />
       </div>
