@@ -1,14 +1,14 @@
 import { useState } from "react";
-// import logo from "../assets/logo.png";
+import logo from "../assets/logo.png";
 import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
-import Dashboard from "./Dashboard";
-import Login from "./Auth/Login";
-import ViewAllSurveys from "./ViewAllSurveys";
-import Surveyors from "./Surveyors";
-import Payment from "./Payment";
-import Profile from "./Profile";
-import Settings from "./Settings";
-import NewSurvey from "../pages/NewSurvey";
+// import Dashboard from "./Dashboard";
+// import Login from "./Auth/Login";
+// import ViewAllSurveys from "./ViewAllSurveys";
+// import Surveyors from "./Surveyors";
+// import Payment from "./Payment";
+// import Profile from "./Profile";
+// import Settings from "./Settings";
+// import NewSurvey from "../pages/NewSurvey";
 
 function Sidebar() {
   const [open, setOpen] = useState(true);
@@ -32,17 +32,10 @@ function Sidebar() {
           } duration-300 h-screen px-9 py-7 bg-bg_dark text-white_color`}
         >
           <div className={`flex gap-x-4 items-center`}>
-            {/* <img src={logo} className={`cursor-pointer duration-500 mt-1 w-13 h-10 ${open && 'rotate-[360deg]'}`} /> */}
-            <h1
-              className={`text-icon_color text-2xl origin-left font-bold text-right duration-300 ${
-                !open && "scale-0"
-              }`}
-            >
-              HUNTEY
-            </h1>
+            <img src={logo} className={`cursor-pointer duration-500 mt-1 w-13 ${open && 'rotate-[360deg]'}`} />
           </div>
 
-          <div className="pt-10">
+          <div className="pt-6">
             <ul>
               {Menus.map((menu, index) => (
                 <NavLink
