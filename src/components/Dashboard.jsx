@@ -15,7 +15,7 @@ export default function Dashboard() {
   return (
     <React.Fragment>
       <Sidebar />
-      <div className="w-4/5">
+      <div className="82%" style={{width: "80%"}}>
         <Navbar />
         <div className={`bg-content_bg w-full`}>
           <div className={`px-10 pt-6 content_bg w-full`}>
