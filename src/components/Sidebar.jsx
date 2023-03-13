@@ -28,8 +28,8 @@ function Sidebar() {
   return (
         <div
           className={`${
-            open ? "w-1/4" : " w-28"
-          } duration-300 h-screen px-9 py-7 bg-bg_dark text-white_color`}
+            open ? "" : " w-28"
+          } duration-300 h-screen px-9 py-7 bg-bg_dark text-white_color`} style={{width: "20%"}} 
         >
           <div className={`flex gap-x-4 items-center`}>
             <img src={logo} className={`cursor-pointer duration-500 mt-1 w-13 ${open && 'rotate-[360deg]'}`} />

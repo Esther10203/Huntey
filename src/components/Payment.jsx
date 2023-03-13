@@ -16,7 +16,7 @@ export default function Payment() {
   return (
     <React.Fragment>
       <Sidebar />
-      <div className="w-3/4">
+      <div style={{width: "80%"}}>
         <Navbar />
         <div id="paymentPage" className="bg-content_bg w-full h-full">
           <div className="bg-white w-4/6 p-4">
