@@ -21,13 +21,32 @@ ChartJS.register(
 
 export const options = {
   responsive: true,
+  scaleShowVerticalLines: false,
   plugins: {
     legend: {
       position: "top",
+      display: false,
     },
     title: {
-      display: true,
+      display: false,
       text: "Chart.js Bar Chart",
+    },
+    scales: {
+      x: {
+        font: {
+          size: 14,
+        },
+        grid: {
+          display: false,
+        },
+        display: true,
+      },
+      y: {
+        grid: {
+          display: true,
+        },
+        display: true,
+      },
     },
   },
 };
@@ -39,13 +58,19 @@ export const data = {
   datasets: [
     {
       label: "Dataset 1",
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-      backgroundColor: "rgba(255, 99, 132, 0.5)",
+      data: [10, 20, 30, 40, 50, 60, 30],
+      backgroundColor: "#27B3AA",
+      borderWidth: 1,
+      borderRadius: 20,
+      pointHoverRadius: 8,
     },
     {
       label: "Dataset 2",
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-      backgroundColor: "rgba(53, 162, 235, 0.5)",
+      data: [10, 20, 30, 40, 50, 20, 40],
+      backgroundColor: "#6160DC",
+      borderWidth: 1,
+      borderRadius: 20,
+      pointHoverRadius: 8,
     },
   ],
 };
@@ -53,8 +78,7 @@ export const data = {
 export default function BarChart() {
   return (
     <div>
-      <h1> BarChart </h1>
-      <Bar options={options} data={data} />;
+      <Bar options={options} data={data} />
     </div>
   );
 }

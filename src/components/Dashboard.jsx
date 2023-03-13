@@ -1,4 +1,6 @@
 import React from "react";
+import BarChart from "./BarChart";
+import { Doughnutt } from "./Doughnutt";
 // import BarChart from "./BarChart";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
@@ -16,7 +18,7 @@ export default function Dashboard() {
       <div className="w-4/5">
         <Navbar />
         <div className={`bg-content_bg w-full`}>
-          <div className={`px-10 pt-6 content_bg w-full h-96`}>
+          <div className={`px-10 pt-6 content_bg w-full`}>
             <div className="flex flex-row w-full">
               <h1 className="font-bold text-2xl">Overall Statistics</h1>
               <button class="bg-button_color hover:bg-icon_color text-white font-normal py-2 px-4 rounded inline-flex items-center absolute right-10">
@@ -41,10 +43,11 @@ export default function Dashboard() {
             <div className="flex flex-row w-full ">
               <div class="w-1/2 mr-4 bg-white p-4">
                 <h1 className="text-base font-bold">Recent Responses</h1>
-                {/* <BarChart /> */}
+                <BarChart />
               </div>
               <div class="w-1/2 bg-white p-4">
                 <h1 className="text-base font-bold">Respondents Location</h1>
+                <Doughnutt />
               </div>
               {/* Dashboard */}
             </div>
