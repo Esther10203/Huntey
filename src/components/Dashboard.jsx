@@ -4,13 +4,17 @@ import { Doughnutt } from "./Doughnutt";
 // import BarChart from "./BarChart";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
+import answered from "../assets/answered.png";
+import enter from "../assets/enter.png";
+import outingg from "../assets/outingg.png";
+import money from "../assets/money.png";
 
 export default function Dashboard() {
   const numbers = [
-    { value: 1.234, title: "Total Surveys", img: "answered" },
-    { value: 1.234, title: "Total Responses", img: "enter" },
-    { value: 1.234, title: "Pending Surveys", img: "outingg" },
-    { value: 1.234, title: "Money Spent", img: "money" },
+    { value: 1.234, title: "Total Surveys", img: answered },
+    { value: 1.234, title: "Total Responses", img: enter },
+    { value: 1.234, title: "Pending Surveys", img: outingg },
+    { value: 1.234, title: "Money Spent", img: money },
   ];
   return (
     <React.Fragment>
@@ -35,7 +39,7 @@ export default function Dashboard() {
                       {val["title"]}
                     </p>
                   </div>
-                  <img src={`./src/assets/${val["img"]}.png`} />
+                  <img src={`${val["img"]}`} />
                 </div>
               ))}
             </div>
