@@ -1,29 +1,30 @@
 import { useState } from "react";
 import logo from "../assets/logo.png";
 import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
-// import Dashboard from "./Dashboard";
-// import Login from "./Auth/Login";
-// import ViewAllSurveys from "./ViewAllSurveys";
-// import Surveyors from "./Surveyors";
-// import Payment from "./Payment";
-// import Profile from "./Profile";
-// import Settings from "./Settings";
-// import NewSurvey from "../pages/NewSurvey";
+import home from "../assets/home.png";
+import list from "../assets/list.png";
+import eye from "../assets/eye.png";
+import pen from "../assets/pen.png";
+import user from "../assets/user.png";
+import payment from "../assets/payment.png";
+import profile from "../assets/profile.png";
+import settings from "../assets/settings.png";
+import logout from "../assets/logout.png";
 
 function Sidebar() {
   const [open, setOpen] = useState(true);
   const activeLink = "bg-link_bg";
   const Menus = [
-    { title: "Dashboard", src: "home", url: "dashboard" },
-    { title: "Surveys", src: "list", url: "surveys", icon: true },
-    { title: "View All", src: "eye", url: "surveys", space: true },
-    { title: "Create New ", src: "pen", url: "new_survey", space: true },
-    { title: "Surveyors", src: "user", url: "surveyors", icon: true },
-    { title: "View All", src: "eye", url: "surveyors", space: true },
-    { title: "Payment ", src: "payment", url: "payment" },
-    { title: "Profile ", src: "profile", url: "profile" },
-    { title: "Settings", src: "settings", url: "setting" },
-    { title: "Log Out", src: "logout", gap: true, url: "logout" },
+    { title: "Dashboard", src: home, url: "dashboard" },
+    { title: "Surveys", src: list, url: "surveys", icon: true },
+    { title: "View All", src: eye, url: "surveys", space: true },
+    { title: "Create New ", src: pen, url: "new_survey", space: true },
+    { title: "Surveyors", src: user, url: "surveyors", icon: true },
+    { title: "View All", src: eye, url: "surveyors", space: true },
+    { title: "Payment ", src: payment, url: "payment" },
+    { title: "Profile ", src: profile, url: "profile" },
+    { title: "Settings", src: settings, url: "setting" },
+    { title: "Log Out", src: logout, gap: true, url: "logout" },
   ];
   return (
         <div
@@ -47,7 +48,7 @@ function Sidebar() {
                     menu.space ? "ml-10" : ""
                   }`}
                 >
-                  <img src={`./src/assets/${menu.src}.png`} />
+                  <img src={`${menu.src}`} />
                   <span
                     className={`${!open && "hidden"} origin-left duration-200`}
                   >
