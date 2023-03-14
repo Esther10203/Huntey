@@ -10,6 +10,7 @@ import payment from "../assets/payment.png";
 import profile from "../assets/profile.png";
 import settings from "../assets/settings.png";
 import logout from "../assets/logout.png";
+import arrow from "../assets/arrow.png";
 
 function Sidebar() {
   const [open, setOpen] = useState(true);
@@ -54,7 +55,7 @@ function Sidebar() {
                   >
                     {menu.title}
                   </span>{" "}
-                  {menu.icon && open && <img src={`./src/assets/arrow.png`} />}{" "}
+                  {menu.icon && open && <img src={`${arrow}`} />}{" "}
                 </NavLink>
               ))}
             </ul>
