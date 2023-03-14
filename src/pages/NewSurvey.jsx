@@ -8,7 +8,7 @@ export default function NewSurvey() {
   return (
     <React.Fragment>
       <Sidebar />
-      <div className="w-3/4">
+      <div style={{width: '80%'}}>
         <Navbar />
         <div className={`bg-content_bg w-full grid grid-cols-6 gap-x-5 px-4`}>
         <NewSurveyForm/>
